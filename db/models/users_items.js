@@ -14,6 +14,21 @@ const createUserItem = async ({userId, ramenId, count}) =>{
  }
 }
 
+const getUsersItemsByUsersId = async ( id ) => {
+  try{ 
+    const {rows: [userItem]} = await client.query(`
+      SELECT * 
+      FROM users_item
+    `, [id])
+    return userItem;
+  } catch(error){
+    console.error(error)
+  }
+}
+
+
+
 module.exports = {
-    createUserItem
+    createUserItem,
+    getUsersItemsByUsersId
 }
