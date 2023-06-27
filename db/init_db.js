@@ -61,11 +61,13 @@ async function populateInitialData() {
   try {
     console.log("Trying to seed tables...");
 
-    await createUser({
+    const bobUser = await createUser({
       username: "Bob",
       password: "BobsPassword",
       email: "bob@email.com",
     });
+
+    // console.log('---------------> bobUser:', bobUser);
 
     await createUser({
       username: "Smith",
@@ -146,3 +148,5 @@ buildTables()
   .then(populateInitialData)
   .catch(console.error)
   .finally(() => client.end());
+
+//module.exports = { buildTables };

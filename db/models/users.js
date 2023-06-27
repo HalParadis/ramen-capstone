@@ -9,6 +9,7 @@ const createUser = async ({username, password, email, address}) => {
       ON CONFLICT DO NOTHING
       RETURNING *;
     `, [username, password, email, address]);
+    //console.log('createUser user:', user);
     user && delete user.password;
     return user;
   }
@@ -17,8 +18,18 @@ const createUser = async ({username, password, email, address}) => {
   }
 }
 
+const getAllUsers = async () => {
+
+}
+
+const getUserByUsername = async () => {
+
+}
  
 module.exports = {
   // add your database adapter fns here
   createUser,
+  getAllUsers,
+  getUserByUsername,
+
 };
