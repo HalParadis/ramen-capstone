@@ -14,6 +14,25 @@ const createRamen = async ({name, price, description, brand}) =>{
     }
 }
 
+const getAllRamen = async () => {
+
+}
+const getRamenById = async (id) => {
+
+}
+
+const updateRamen = async ({name, price, description, brand}) => {
+
+}
+
+const deleteRamen = async (id) => {
+
+}
+
 module.exports = {
-    createRamen
+    createRamen,
+    getAllRamen,
+    getRamenById, 
+    updateRamen,
+    deleteRamen
 }
