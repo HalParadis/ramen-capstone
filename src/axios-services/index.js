@@ -1,7 +1,7 @@
 import axios from "axios";
 // const BASE_URI = process.env.API_BASE_URI ?? "";
 
-const BASE_URI = 'https://we-love-ramen.onrender.com';
+const BASE_URI = 'https://we-love-ramen-z99y.onrender.com';
 
 // this file holds your frontend network request adapters
 // think about each function as a service that provides data
